@@ -1,0 +1,65 @@
+header {
+    background-color: transparentize($background-color1, .5);
+    position: absolute;
+    width: 100vw;
+    z-index: 100;
+    nav {
+        display: flex;
+        flex-direction: column;
+
+        ol {
+            text-emphasis: center;
+            list-style: none;
+            overflow: hidden;
+        }
+
+        li {
+            margin: 30px;
+            display: inline;
+        }
+    }
+}
+
+.header-sticky{
+    animation: navBarAni .5s forwards;
+}
+
+.header{
+    animation: navBarAni .5s reverse forwards;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 100; /* this is optional and should be different for every project */
+}
+
+.sticky-wrapper {
+    position: relative;
+}
+  
+.sticky .sticky-inner {
+    background-color: transparentize($background-color1, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.sticky .sticky-inner.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: transparentize($background-color1, .5)
+}
+
+
+
+
+@keyframes navBarAni {
+    from {background-color: transparentize($background-color1, .5);}
+    to {background-color: transparentize($background-color1, 1);}
+}
